@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in eos/LICENSE
+ *  @copyright defined in vectrum/LICENSE
  */
 #pragma once
 
@@ -20,7 +20,7 @@ namespace eosio {
     */
 
    /**
-    *  EOSIO ECC public key data
+    *  VECTRUM ECC public key data
     *
     *  Fixed size representation of either a K1 or R1 compressed public key
 
@@ -29,7 +29,7 @@ namespace eosio {
    using ecc_public_key = std::array<char, 33>;
 
    /**
-    *  EOSIO WebAuthN public key
+    *  VECTRUM WebAuthN public key
     *
     *  @ingroup public_key
     */
@@ -86,7 +86,7 @@ namespace eosio {
    };
 
    /**
-    *  EOSIO Public Key
+    *  VECTRUM Public Key
     *
     *  A public key is a variant of
     *   0 : a ECC K1 public key
@@ -140,7 +140,7 @@ namespace eosio {
     */
 
    /**
-    *  EOSIO ECC signature data
+    *  VECTRUM ECC signature data
     *
     *  Fixed size representation of either a K1 or R1 ECC compact signature
 
@@ -149,7 +149,7 @@ namespace eosio {
    using ecc_signature = std::array<char, 65>;
 
    /**
-    *  EOSIO WebAuthN signature
+    *  VECTRUM WebAuthN signature
     *
     *  @ingroup signature
     */
@@ -184,7 +184,7 @@ namespace eosio {
    };
 
    /**
-    *  EOSIO Signature
+    *  VECTRUM Signature
     *
     *  A signature is a variant of
     *   0 : a ECC K1 signature

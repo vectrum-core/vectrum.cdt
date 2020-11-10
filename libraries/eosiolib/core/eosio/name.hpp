@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in eos/LICENSE
+ *  @copyright defined in vectrum/LICENSE
  */
 #pragma once
 
@@ -22,7 +22,7 @@ namespace eosio {
     * @defgroup name
     * @ingroup core
     * @ingroup types
-    * @brief EOSIO Name Type
+    * @brief VECTRUM Name Type
     */
 
    /**

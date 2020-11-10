@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in eosio.cdt/LICENSE.txt
+ *  @copyright defined in vectrum.cdt/LICENSE.txt
  */
 
 #include <eosio/eosio.hpp>

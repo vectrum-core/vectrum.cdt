@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in eos/LICENSE
+ *  @copyright defined in vectrum/LICENSE
  */
 #pragma once
 #include "types.h"
@@ -15,7 +15,7 @@ extern "C" {
  * @brief Defines API for querying action and sending action
  *
  *
- * A EOS.IO action has the following abstract structure:
+ * A VECTRUM action has the following abstract structure:
  *
  * ```
  *   struct action {

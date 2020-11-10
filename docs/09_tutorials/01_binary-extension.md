@@ -2,7 +2,7 @@
 content_title: eosio::binary_extension
 ---
 
-You can find the implementation of `eosio::binary_extension` in the `eosio.cdt` repository in [binary_extension.hpp](https://github.com/EOSIO/eosio.cdt/blob/master/libraries/eosiolib/binary_extension.hpp).
+You can find the implementation of `eosio::binary_extension` in the `vectrum.cdt` repository in [binary_extension.hpp](https://github.com/vectrum-core/vectrum.cdt/blob/master/libraries/eosiolib/binary_extension.hpp).
 
 The primary concern when using this type is when you are adding a new field to a smart contract's data structure that is currently utilized in an `eosio::multi_index` type (AKA a _table_), or when adding a new parameter to an action declaration.
 
@@ -14,7 +14,7 @@ If you don't wrap the new field in an `eosio::binary_extension`, the `eosio::mul
 
 Take a moment to study this smart contract and its corresponding `.abi`.
 
-This contract not only serves as a good example to the `eosio::binary_extension` type, but can also be used as a gateway for developing smart contracts on the eosio protocol.
+This contract not only serves as a good example to the `eosio::binary_extension` type, but can also be used as a gateway for developing smart contracts on the VECTRUM protocol.
 
 **binary_extension_contract.hpp**
 
@@ -161,7 +161,7 @@ using eosio::name;
 
 ```javascript
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "____comment": "This file was generated with vectrum-abigen. DO NOT EDIT ",
     "version": "eosio::abi/1.1",
     "types": [],
     "structs": [
@@ -360,11 +360,11 @@ And their corresponding sections in the `.abi` files:
 <hr>Start up a blockchain instance, compile this smart contract, and test it out.
 
 ```
-~/binary_extension_contract $ eosio-cpp binary_extension_contract.cpp -o binary_extension_contract.wasm
+~/binary_extension_contract $ vectrum-cpp binary_extension_contract.cpp -o binary_extension_contract.wasm
 ```
 
 ```
-~/binary_extension_contract $ cleos set contract eosio ./
+~/binary_extension_contract $ vectrum-cli set contract eosio ./
 ```
 
 ```
@@ -379,7 +379,7 @@ warning: transaction executed locally, but may not be confirmed by the network y
 Next, push some data to the contract defined.
 
 ```
-~/binary_extension_contract $ cleos push action eosio regpkey '{"primary_key":"eosio.name"}' -p eosio
+~/binary_extension_contract $ vectrum-cli push action eosio regpkey '{"primary_key":"eosio.name"}' -p eosio
 ```
 
 ```
@@ -396,7 +396,7 @@ warning: transaction executed locally, but may not be confirmed by the network y
 Finally, read back the data you have just written.
 
 ```
-~/binary_extension_contract $ cleos push action eosio printbyp '{"primary_key":"eosio.name"}' -p eosio
+~/binary_extension_contract $ vectrum-cli push action eosio printbyp '{"primary_key":"eosio.name"}' -p eosio
 ```
 
 ```
@@ -503,11 +503,11 @@ struct [[eosio::table]] structure {
 Next, upgrade the contract and try to read from table and write to table the original way:
 
 ```
-~/binary_extension_contract $ eosio-cpp binary_extension_contract.cpp -o binary_extension_contract.wasm
+~/binary_extension_contract $ vectrum-cpp binary_extension_contract.cpp -o binary_extension_contract.wasm
 ```
 
 ```
-~/binary_extension_contract $ cleos set contract eosio ./
+~/binary_extension_contract $ vectrum-cli set contract eosio ./
 ```
 
 ```
@@ -520,7 +520,7 @@ warning: transaction executed locally, but may not be confirmed by the network y
 ```
 
 ```
-~/binary_extension_contract $ cleos push action eosio printbyp '{"primary_key":"eosio.name"}' -p eosio
+~/binary_extension_contract $ vectrum-cli push action eosio printbyp '{"primary_key":"eosio.name"}' -p eosio
 ```
 
 ```
@@ -532,7 +532,7 @@ assertion failure with message: read
 Whoops, you aren't able to read the data you've previously written to table.
 
 ```
-~/binary_extension_contract $ cleos push action eosio regpkey '{"primary_key":"eosio.name2"}' -p eosio
+~/binary_extension_contract $ vectrum-cli push action eosio regpkey '{"primary_key":"eosio.name2"}' -p eosio
 ```
 
 ```
@@ -657,7 +657,7 @@ Note the `$` after the types now; this indicates that this type is an `eosio::bi
 Now, upgrade the contract again and try to read/write from/to table:
 
 ```
-~/binary_extension_contract $ cleos set contract eosio ./
+~/binary_extension_contract $ vectrum-cli set contract eosio ./
 ```
 
 ```
@@ -670,7 +670,7 @@ warning: transaction executed locally, but may not be confirmed by the network y
 ```
 
 ```
-~/binary_extension_contract $ cleos push action eosio printbyp '{"primary_key":"eosio.name"}' -p eosio
+~/binary_extension_contract $ vectrum-cli push action eosio printbyp '{"primary_key":"eosio.name"}' -p eosio
 ```
 
 ```
@@ -686,7 +686,7 @@ warning: transaction executed locally, but may not be confirmed by the network y
 ```
 
 ```
-~/binary_extension_contract $ cleos push action eosio regpkey '{"primary_key":"eosio.name2"}' -p eosio
+~/binary_extension_contract $ vectrum-cli push action eosio regpkey '{"primary_key":"eosio.name2"}' -p eosio
 ```
 
 ```

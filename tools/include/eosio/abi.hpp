@@ -55,7 +55,7 @@ struct abi_error_message {
    std::string error_msg;
 };
 
-/// From eosio libraries/chain/include/eosio/chain/abi_def.hpp
+/// From VECTRUM libraries/chain/include/eosio/chain/abi_def.hpp
 struct abi {
    std::string version = "eosio::abi/1.1";
    std::set<abi_struct>  structs;

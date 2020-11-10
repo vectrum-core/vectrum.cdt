@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  vectrum_cdt:
+    build:
+      context: .
+      dockerfile: ./from-binaries.dockerfile
+    image: vectrum/vectrum.cdt
+    command: vectrum-cpp -abigen /data/src/hello.cpp -o /data/build/hello.wasm -I /data/include
+    hostname: vectrum_cdt
+    volumes:
+      - vectrum-cdt-data-volume:/data
+      #- ./data:/data
+
+volumes:
+  vectrum-cdt-data-volume:
+    external: true
