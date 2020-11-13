@@ -7,7 +7,7 @@ binaries=(
    vectrum-ar
    vectrum-objdump
    vectrum-readelf
-   eovectrumsio-abigen
+   vectrum-abigen
    vectrum-wasm2wast
    vectrum-wast2wasm
    vectrum-pp
