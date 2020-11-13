@@ -79,7 +79,7 @@ install(FILES ${CMAKE_BINARY_DIR}/scripts/ricardian.py DESTINATION ${CDT_INSTALL
 set(VENDOR "vectrum.group")
 set(PROJECT_NAME "vectrum.cdt")
 set(DESC "Toolchain and supporting tools for the VECTRUM platform")
-set(URL "https://github.com/vectrum-cpre/vectrum.cdt")
+set(URL "https://github.com/vectrum-core/vectrum.cdt")
 set(EMAIL "support@vectrum.group")
 configure_file(${CMAKE_SOURCE_DIR}/scripts/generate_package.sh.in ${CMAKE_BINARY_DIR}/packages/generate_package.sh @ONLY)
 configure_file(${CMAKE_SOURCE_DIR}/scripts/generate_deb.sh ${CMAKE_BINARY_DIR}/packages/generate_deb.sh COPYONLY)
